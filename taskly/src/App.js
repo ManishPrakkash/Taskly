@@ -6,8 +6,8 @@ import { ShowTask } from './components/ShowTask';
 function App() {
  return (
   <div className="app">
-    <AddTask />
     <Header />
+    <AddTask />
     <ShowTask />
   </div>
  );

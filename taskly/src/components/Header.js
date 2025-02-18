@@ -1,6 +1,14 @@
 import Logo from "../assets/Logo.png"
-
+import { useEffect, useState } from "react";
 export const Header = () => {
+  const [theme,setTheme]=useState(JSON.parse(localStorage.getItem("theme"))||"medium");
+
+  useEffect(()=>{
+    localStorage.setItem("theme",JSON.stringify(theme))
+  document.documentElement.removeAttribute("class");
+  document.documentElement.classList.add(theme);
+  },[theme])
+
   return (
     <header>
         <div className="logo">
